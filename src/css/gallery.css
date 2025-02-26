@@ -45,3 +45,8 @@
   font-weight: 600;
   line-height: 1.33333;
 }
+
+.load-more-btn {
+  display: block;
+  margin: 32px auto 0;
+}

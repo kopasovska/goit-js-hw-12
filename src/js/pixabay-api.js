@@ -9,13 +9,17 @@ const axiosInstance = axios.create({
     image_type: 'photo',
     orientation: 'horizontal',
     safeSearch: true,
+    per_page: 40,
   },
 });
 
-export function getImages(searchQuery) {
+export async function getImages(searchQuery, page) {
   const params = {
     q: encodeURIComponent(searchQuery),
+    page: page,
   };
 
-  return axiosInstance.get('', { params }).then(response => response.data.hits);
+  const response = await axiosInstance.get('', { params });
+
+  return response.data;
 }

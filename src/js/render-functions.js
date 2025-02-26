@@ -8,7 +8,6 @@ const lightbox = new SimpleLightbox('.gallery a', {
 });
 
 function galleryMarkup(images) {
-  console.log(images);
   const markup = images
     .map(
       image => `<li class="gallery-item">
@@ -50,7 +49,6 @@ function galleryMarkup(images) {
 }
 
 export function renderGallery(images, gallery) {
-  gallery.innerHTML = '';
   gallery.insertAdjacentHTML('beforeend', galleryMarkup(images));
   lightbox.refresh();
 }
