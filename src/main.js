@@ -24,6 +24,7 @@ async function submitFormHandler(event) {
 
   refs.gallery.innerHTML = '';
   page = 1;
+  hideLoadMoreBtn();
 
   searchQuery = event.target.elements.searchQuery.value.trim();
 
